@@ -5,7 +5,9 @@ async function run() {
     const browser = await puppeteer.launch({ 
         headless: false,
         defaultViewport: {width: 1440, height: 600},
-        devtools: true
+        devtools: true,
+        slowMo: 1000
+        // env: "env"
     },);
     // const browser = await puppeteer.launch({ headless: false });
 
