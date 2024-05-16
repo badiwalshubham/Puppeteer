@@ -3,7 +3,8 @@
  (async () => {
 
     try {
-        const browser = puppetter.launch({headless: false})
+        // const browser = puppetter.launch({headless: false})
+        const browser = puppetter.launch({headless: true})
         const page = await browser.newPage();
         await page.goto('https://www.google.com');
         await page.screenshot({path: 'google.png'});
