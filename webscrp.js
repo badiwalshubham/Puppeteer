@@ -2,8 +2,13 @@ const puppeteer = require('puppeteer');
 
 async function run() {
     // Launch the a browser instance
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ 
+        headless: false,
+        defaultViewport: {width: 1440, height: 600},
+        devtools: true
+    },);
     // const browser = await puppeteer.launch({ headless: false });
+
     const page = await browser.newPage();
 
     await page.goto('https://yahoo.com');
